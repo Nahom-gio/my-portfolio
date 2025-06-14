@@ -6,25 +6,25 @@ const projects = [
     title: 'School Management System',
     description:
       'A fully modular C++ system for managing students, teachers, courses, attendance, and grades, with persistent file storage.',
-    link: 'https://github.com/yourusername/school-management',
+    link: 'https://github.com/Nahom-gio/School-mangment-system-with-C-',
   },
   {
     title: 'Personal Portfolio',
     description:
       'A modern, responsive portfolio built using React and Tailwind CSS to showcase my skills, projects, and contact information.',
-    link: 'https://github.com/yourusername/portfolioo',
+    link: 'https://github.com/Nahom-gio/my-portfolio',
   },
   {
-    title: 'Weather Forecast App',
+    title: 'Library Management System',
     description:
-      'A JavaScript-based web app that fetches live weather data from an API and presents it with clean visuals and animations.',
-    link: 'https://github.com/yourusername/weather-app',
+      'A fully modular c# system for managing books, patrons, loans, and returns, with persistent file storage. ',
+    link: 'https://github.com/Nahom-gio/Library-management-system-with-c-',
   },
   {
-    title: 'Task Tracker CLI',
+    title: 'Wegahta Tigray charity website',
     description:
-      'A simple yet efficient command-line To-Do list tracker written in Python, featuring file-based persistence and task categorization.',
-    link: 'https://github.com/yourusername/task-tracker',
+      'A simple charity website built with HTML, CSS, and JavaScript, designed to raise awareness and support for the Tigray region through donations and project updates.',
+    link: 'https://github.com/Nahom-gio/wegahta.tigray',
   },
 ];
 

@@ -19,9 +19,9 @@ function About() {
         <div className="text-center md:text-left">
           <h2 className="text-4xl font-bold text-white-800 mb-4">About Me</h2>
           <p className="text-white-700 text-lg leading-relaxed mb-6">
-            Hello! I'm <span className="font-semibold text-blue-600">Nahom</span>, a dedicated web developer passionate about building responsive, user-friendly applications.
-            I specialize in <strong>React</strong>, <strong>Tailwind CSS</strong>, and modern JavaScript. I'm also diving into backend development with Node.js, always aiming to grow and create impactful software.
-          </p>
+           Hello! I'm <span className="font-semibold text-blue-600">Nahom</span>, a Software Engineering student with over 5 years of experience in front-end development.  
+I specialize in <strong>C#</strong>, <strong>C++</strong>, and <strong>Java</strong>, and I love solving diverse programming challenges. Passionate about tech and continuous learning, I thrive on collaborating with others to build meaningful software. Let’s connect!
+</p>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
