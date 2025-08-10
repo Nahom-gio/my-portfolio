@@ -64,7 +64,7 @@ function Contact() {
               <Github size={28} />
             </a>
             <a
-              href="linkedin.com/in/nahom-g-giorgies"
+              href="https://linkedin.com/in/nahom-g-giorgies"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-white transition-colors"
