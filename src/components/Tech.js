@@ -4,20 +4,27 @@ import {
   FaCss3Alt,
   FaJs,
   FaReact,
-  FaDatabase,
+  FaPhp,
+  FaGithub,
+  FaJava,
 } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
-import { DiJava } from "react-icons/di";
+import {
+  SiTailwindcss,
+  SiJquery,
+  SiExpress,
+  SiPostgresql,
+  SiMysql,
+  SiMicrosoftsqlserver,
+} from "react-icons/si";
+import { motion } from "framer-motion";
 
-// Custom SVGs for C++ and C#
+// Custom C++ Icon
 const cppIcon = (
   <svg
     viewBox="0 0 128 128"
-    className="w-10 h-10 mx-auto"
+    className="w-12 h-12 mx-auto"
     xmlns="http://www.w3.org/2000/svg"
     fill="#00599C"
-    role="img"
-    aria-label="C++"
   >
     <path d="M63.9 0L1.1 32v64l62.8 32 62.9-32V32z" />
     <path
@@ -31,14 +38,13 @@ const cppIcon = (
   </svg>
 );
 
+// Custom C# Icon
 const csharpIcon = (
   <svg
     viewBox="0 0 128 128"
-    className="w-10 h-10 mx-auto"
+    className="w-12 h-12 mx-auto"
     xmlns="http://www.w3.org/2000/svg"
     fill="#68217A"
-    role="img"
-    aria-label="C#"
   >
     <path d="M64 0L7.6 32v64L64 128l56.4-32V32z" />
     <path
@@ -53,36 +59,63 @@ const csharpIcon = (
 );
 
 const techStack = [
-  { name: "C++", icon: cppIcon },
-  { name: "C#", icon: csharpIcon },
-  { name: "HTML", icon: <FaHtml5 className="text-orange-600 w-10 h-10 mx-auto" /> },
-  { name: "CSS", icon: <FaCss3Alt className="text-blue-500 w-10 h-10 mx-auto" /> },
-  { name: "Java", icon: <DiJava className="text-red-700 w-10 h-10 mx-auto" /> },
-  { name: "JavaScript", icon: <FaJs className="text-yellow-400 w-10 h-10 mx-auto" /> },
-  { name: "React", icon: <FaReact className="text-cyan-400 w-10 h-10 mx-auto" /> },
-  { name: "Tailwind", icon: <SiTailwindcss className="text-teal-400 w-10 h-10 mx-auto" /> },
-  { name: "SQL", icon: <FaDatabase className="text-gray-700 w-10 h-10 mx-auto" /> },
+  { name: "C#", icon: csharpIcon, color: "#68217A" },
+  { name: "Java", icon: <FaJava className="w-12 h-12 mx-auto text-red-700" />, color: "#E11D48" },
+  { name: "C++", icon: cppIcon, color: "#2563EB" },
+  { name: "CSS", icon: <FaCss3Alt className="w-12 h-12 mx-auto text-blue-500" />, color: "#3B82F6" },
+  { name: "HTML5", icon: <FaHtml5 className="w-12 h-12 mx-auto text-orange-600" />, color: "#F97316" },
+  { name: "JavaScript", icon: <FaJs className="w-12 h-12 mx-auto text-yellow-400" />, color: "#FACC15" },
+  { name: "jQuery", icon: <SiJquery className="w-12 h-12 mx-auto text-blue-400" />, color: "#38BDF8" },
+  { name: "Express.js", icon: <SiExpress className="w-12 h-12 mx-auto text-gray-300" />, color: "#D1D5DB" },
+  { name: "React", icon: <FaReact className="w-12 h-12 mx-auto text-cyan-400" />, color: "#06B6D4" },
+  { name: "Tailwind CSS", icon: <SiTailwindcss className="w-12 h-12 mx-auto text-teal-400" />, color: "#14B8A6" },
+  { name: "PostgreSQL", icon: <SiPostgresql className="w-12 h-12 mx-auto text-blue-500" />, color: "#3B82F6" },
+  { name: "MySQL", icon: <SiMysql className="w-12 h-12 mx-auto text-blue-400" />, color: "#38BDF8" },
+  { name: "Microsoft SQL Server", icon: <SiMicrosoftsqlserver className="w-12 h-12 mx-auto text-red-600" />, color: "#DC2626" },
+  { name: "PHP", icon: <FaPhp className="w-12 h-12 mx-auto text-indigo-500" />, color: "#6366F1" },
+  { name: "GitHub", icon: <FaGithub className="w-12 h-12 mx-auto text-white" />, color: "#FFFFFF" },
 ];
 
 function Tech() {
   return (
-  <section id="tech" className="bg-[#0a0f1c] py-20 px-4 text-gray-200">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-white-800 dark:text-white mb-12">
+    <section id="tech" className="relative bg-[#0a0f1c] py-20 px-4 text-gray-200 overflow-hidden">
+      {/* Background gradient blobs */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold text-center mb-12"
+        >
           🛠 Tech I Use
-        </h2>
+        </motion.h2>
+
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {techStack.map((tech) => (
-            <div
+          {techStack.map((tech, index) => (
+            <motion.div
               key={tech.name}
-              className="p-5 bg-white dark:bg-gray-800 rounded-2xl shadow hover:shadow-xl transform transition duration-300 hover:scale-105"
-              aria-label={`Technology: ${tech.name}`}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.08, rotate: 1 }}
+              className="p-5 bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg cursor-pointer group relative overflow-hidden"
             >
-              <div className="mb-3">{tech.icon}</div>
-              <p className="text-lg font-medium text-gray-700 dark:text-gray-200 text-center">
-                {tech.name}
-              </p>
-            </div>
+              {/* Glow effect */}
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-30 transition duration-300"
+                style={{
+                  background: `radial-gradient(circle, ${tech.color} 0%, transparent 70%)`,
+                }}
+              ></div>
+
+              <div className="mb-3 relative z-10">{tech.icon}</div>
+              <p className="text-lg font-medium text-center relative z-10">{tech.name}</p>
+            </motion.div>
           ))}
         </div>
       </div>
