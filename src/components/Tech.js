@@ -5,11 +5,9 @@ import {
   FaJs,
   FaReact,
   FaDatabase,
-  FaPhp,
-  FaGithub,
-  FaJava,
 } from "react-icons/fa";
-import { SiTailwindcss, SiJquery, SiExpress, SiPostgresql, SiMysql, SiMicrosoftsqlserver } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { DiJava } from "react-icons/di";
 
 // Custom SVGs for C++ and C#
 const cppIcon = (
@@ -55,39 +53,35 @@ const csharpIcon = (
 );
 
 const techStack = [
-  { name: "C#", icon: csharpIcon },
-  { name: "Java", icon: <FaJava className="text-red-700 w-10 h-10 mx-auto" /> },
   { name: "C++", icon: cppIcon },
+  { name: "C#", icon: csharpIcon },
+  { name: "HTML", icon: <FaHtml5 className="text-orange-600 w-10 h-10 mx-auto" /> },
   { name: "CSS", icon: <FaCss3Alt className="text-blue-500 w-10 h-10 mx-auto" /> },
-  { name: "HTML5", icon: <FaHtml5 className="text-orange-600 w-10 h-10 mx-auto" /> },
+  { name: "Java", icon: <DiJava className="text-red-700 w-10 h-10 mx-auto" /> },
   { name: "JavaScript", icon: <FaJs className="text-yellow-400 w-10 h-10 mx-auto" /> },
-  { name: "jQuery", icon: <SiJquery className="text-blue-400 w-10 h-10 mx-auto" /> },
-  { name: "Express.js", icon: <SiExpress className="text-gray-300 w-10 h-10 mx-auto" /> },
   { name: "React", icon: <FaReact className="text-cyan-400 w-10 h-10 mx-auto" /> },
-  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400 w-10 h-10 mx-auto" /> },
-  { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-500 w-10 h-10 mx-auto" /> },
-  { name: "MySQL", icon: <SiMysql className="text-blue-400 w-10 h-10 mx-auto" /> },
-  { name: "Microsoft SQL Server", icon: <SiMicrosoftsqlserver className="text-red-600 w-10 h-10 mx-auto" /> },
-  { name: "PHP", icon: <FaPhp className="text-indigo-500 w-10 h-10 mx-auto" /> },
-  { name: "GitHub", icon: <FaGithub className="text-white w-10 h-10 mx-auto" /> },
+  { name: "Tailwind", icon: <SiTailwindcss className="text-teal-400 w-10 h-10 mx-auto" /> },
+  { name: "SQL", icon: <FaDatabase className="text-gray-700 w-10 h-10 mx-auto" /> },
 ];
 
 function Tech() {
   return (
-    <section id="tech" className="bg-[#0a0f1c] py-20 px-4 text-gray-200">
+  <section id="tech" className="bg-[#0a0f1c] py-20 px-4 text-gray-200">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-12">
+        <h2 className="text-4xl font-bold text-center text-white-800 dark:text-white mb-12">
           🛠 Tech I Use
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {techStack.map((tech) => (
             <div
               key={tech.name}
-              className="p-5 bg-white/10 backdrop-blur-lg rounded-2xl shadow hover:shadow-xl transform transition duration-300 hover:scale-105"
+              className="p-5 bg-white dark:bg-gray-800 rounded-2xl shadow hover:shadow-xl transform transition duration-300 hover:scale-105"
               aria-label={`Technology: ${tech.name}`}
             >
-              <div className="mb-3 flex justify-center">{tech.icon}</div>
-              <p className="text-lg font-medium text-center">{tech.name}</p>
+              <div className="mb-3">{tech.icon}</div>
+              <p className="text-lg font-medium text-gray-700 dark:text-gray-200 text-center">
+                {tech.name}
+              </p>
             </div>
           ))}
         </div>
