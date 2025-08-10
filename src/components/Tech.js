@@ -14,7 +14,6 @@ import {
   SiExpress,
   SiPostgresql,
   SiMysql,
-  SiMicrosoftsqlserver,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -71,7 +70,6 @@ const techStack = [
   { name: "Tailwind CSS", icon: <SiTailwindcss className="w-12 h-12 mx-auto text-teal-400" />, color: "#14B8A6" },
   { name: "PostgreSQL", icon: <SiPostgresql className="w-12 h-12 mx-auto text-blue-500" />, color: "#3B82F6" },
   { name: "MySQL", icon: <SiMysql className="w-12 h-12 mx-auto text-blue-400" />, color: "#38BDF8" },
-  { name: "Microsoft SQL Server", icon: <SiMicrosoftsqlserver className="w-12 h-12 mx-auto text-red-600" />, color: "#DC2626" },
   { name: "PHP", icon: <FaPhp className="w-12 h-12 mx-auto text-indigo-500" />, color: "#6366F1" },
   { name: "GitHub", icon: <FaGithub className="w-12 h-12 mx-auto text-white" />, color: "#FFFFFF" },
 ];
