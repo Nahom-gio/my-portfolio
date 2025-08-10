@@ -19,7 +19,7 @@ function About() {
         <div className="text-center md:text-left">
           <h2 className="text-4xl font-bold text-white-800 mb-4">About Me</h2>
           <p className="text-white-700 text-lg leading-relaxed mb-6">
-           Hello! I'm <span className="font-semibold text-blue-600">Nahom</span>, a Software Engineering student with over 5 years of experience in front-end development.  
+           Hello! I'm <span className="font-semibold text-blue-600">Nahom</span>, a Software Engineering student with over 3 years of experience in programming.  
 I specialize in <strong>C#</strong>, <strong>C++</strong>, and <strong>Java</strong>, and I love solving diverse programming challenges. Passionate about tech and continuous learning, I thrive on collaborating with others to build meaningful software. Let’s connect!
 </p>
 

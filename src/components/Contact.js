@@ -1,10 +1,10 @@
 import React from 'react';
-import { Mail } from 'lucide-react'; // Icon
-import { motion } from 'framer-motion'; // Optional animation
+import { Mail, Github, Linkedin } from 'lucide-react'; // Added icons
+import { motion } from 'framer-motion';
 
 function Contact() {
   return (
-  <section id="contact" className="bg-[#0a0f1c] py-20 px-4 text-gray-200">
+    <section id="contact" className="bg-[#0a0f1c] py-20 px-4 text-gray-200">
       <div className="max-w-2xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -17,6 +17,8 @@ function Contact() {
           <p className="text-center text-gray-300 mb-8">
             Have a project in mind or just want to say hi? Drop a message below 👇
           </p>
+
+          {/* Contact Form */}
           <form
             action="https://formspree.io/f/xzzgegrp"
             method="POST"
@@ -50,6 +52,26 @@ function Contact() {
               <Mail size={20} /> Send Message
             </button>
           </form>
+
+          {/* Social Links */}
+          <div className="flex justify-center gap-6 mt-8">
+            <a
+              href="https://github.com/Nahom-gio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              <Github size={28} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/nahom-g-giorgies/nkedin.com/in/nahom-g-giorgies"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              <Linkedin size={28} />
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>
